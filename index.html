@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,35 +6,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
   
   <title>Frontend Mentor | Project tracking intro component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+<style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+</style>
+
 </head>
+
 <body>
-  Product
-  Features
-  Pricing
-  Login
 
-  New
-  Monograph Dashboard
+<header>
+  <a href="#">
+<img src="images/logo.svg" id="logo">logo</img>
+  </a>
 
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
+  <nav id="navigation" style="display: none">
+  <a href="#">Product</a>
+  <a href="#">Features</a>
+  <a href="#">Pricing</a>
+  <span id="circle">⬤</span>
+  <a href="#">Login</a>
+</nav>
 
-  Schedule a demo
-  to see a live preview
+<nav id="mobile-navigation" >
+    <a href="#">PRODUCT</a>
+    <a href="#">FEATURES</a>
+    <a href="#">PRICING</a>
+    <hr />
+    <a href="#">LOGIN</a>
+  </nav>
+
+</header>
+<main class="">
+<div>
+<img src="images/illustration-devices.svg">
+</div>
+
+<div>
   
-  <footer>
+  <p> <span>New </span> Monograph Dashboard </p>
+
+  <h1>
+    Powerful insights into your team
+  </h1>
+  <p> Project planning and time tracking for agile teams </p>
+
+  <div>
+  <button>Schedule a demo </button>
+  <span>to see a live preview</span>
+</div>
+</div>
+</main>
+<footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/heikergil/project-tracking-intro-component">Heiker Gil</a>.
     </p>
-  </footer>
+</footer>
 </body>
 </html>
