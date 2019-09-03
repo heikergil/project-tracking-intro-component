@@ -4,6 +4,10 @@
     display: none;
 }
 
+.flex {
+    display: flex;
+}
+
 nav {
     position: relative;
     height: 10vh;
@@ -35,11 +39,15 @@ nav {
     }
 
     .nav-links {
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
         position: fixed;
-        top: 50%;
+        top: 30%;
         right: 50%;
-        width: 300px;
-        height: 300px;
+        transform: translate(50%, -30%);
+        width: 250px;
+        height: 200px;
         background-color: azure;
     }
 }
@@ -47,8 +55,21 @@ nav {
 main {
     height: 90vh;
     background-color: green;
+
+    .block {
+        border: red solid 1px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
+h1 {
+    margin: 30px;
+}
+p {
+    margin: 30px;
+}
 footer {
     height: 5vh;
     background-color: yellow;
