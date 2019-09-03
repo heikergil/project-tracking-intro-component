@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/style.css">
-  
+  <script defer src="scripts.js"></script>
   <title>Frontend Mentor | Project tracking intro component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -19,29 +19,26 @@
 
 <body>
 
-<header>
-  <a href="#">
-<img src="images/logo.svg" id="logo">logo</img>
-  </a>
-
 <nav>
 
-  <div>
-    <div class="line">"line"</div>
-    <div class="line">"line"</div>
-    <div class="line">"line"</div>
+  <a class="logo" href="#">
+    <img src="images/logo.svg" id="logo"></img>
+      </a>
+
+  <div class="hamburguer">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
   </div>
 
-  <ul class="nav-links">
-     <li><a href="#">PRODUCT</a></li> 
-     <li><a href="#">FEATURES</a></li> 
-     <li><a href="#">PRICING</a></li> 
-     <li><a href="#">LOGIN</a></li> 
+  <ul class="nav-links hidden" >
+     <li><a class="links" href="#">PRODUCT</a></li> 
+     <li><a class="links" href="#">FEATURES</a></li> 
+     <li><a class="links" href="#">PRICING</a></li> 
+     <li><a class="links" href="#">LOGIN</a></li> 
   </ul>
     
   </nav>
-
-</header>
 
 <main>
 
