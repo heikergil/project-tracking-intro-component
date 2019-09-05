@@ -38,6 +38,11 @@ nav {
   font-family: "Barlow Condensed", sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .hidden {
   display: none;
 }
@@ -84,9 +89,12 @@ nav .nav-links {
   height: 200px;
   background-color: azure;
 }
+nav .nav-links-desktop {
+  display: none;
+}
 
 main {
-  height: 85vh;
+  height: 90vh;
   background-color: green;
 }
 main .image-container {
@@ -94,51 +102,88 @@ main .image-container {
   margin-bottom: 50px;
 }
 main .block {
-  border: red solid 1px;
+  background-color: blue;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .block .name {
+  text-transform: uppercase;
+  color: #a0a1ac;
+}
+main .block .name .new {
+  background-color: #242942;
+  color: white;
+  border-radius: 18px;
+  padding: 5px;
+  margin: 14px;
+  font-weight: 700;
+  width: 50px;
 }
 
 h1 {
   margin: 30px;
+  font-weight: 700;
+  color: #5b5f71;
+  text-transform: uppercase;
 }
 
 p {
+  color: #a0a1ac;
   margin: 30px;
 }
 
 footer {
-  height: 5vh;
   background-color: yellow;
+  height: 40px;
 }
 
 @media screen and (min-width: 426px) {
   nav .hamburguer {
     display: none;
   }
-  nav .line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
+  nav .nav-links-desktop {
+    margin-top: 20px;
+    background-color: aliceblue;
+    width: 50%;
+    float: right;
+    display: flex;
   }
-  nav .nav-links {
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-    position: fixed;
-    top: 30%;
-    right: 50%;
-    transform: translate(50%, -30%);
-    width: 250px;
-    height: 200px;
-    background-color: azure;
+  nav .nav-links-desktop li {
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
   }
 
   main {
     background-color: purple;
+  }
+}
+@media screen and (min-width: 689px) {
+  nav .hamburguer {
+    display: none;
+  }
+  nav .nav-links-desktop {
+    margin-top: 20px;
+    background-color: aliceblue;
+    width: 50%;
+    float: right;
+    display: flex;
+  }
+  nav .nav-links-desktop li {
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+
+  main {
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
