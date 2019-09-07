@@ -1,9 +1,15 @@
 @import 'reset';
 @import 'colors';
 
+html {
+    height: 100%;
+  }
+
 body {
     display: flex;
     flex-direction: column;
+    min-width: 375px;
+    
 }
 .hidden {
     display: none;
@@ -15,9 +21,8 @@ body {
 
 nav {
     position: relative;
-    height: 10vh;
+    height: 55px;
     width: 100%;
-    background-color: red;
     
     .logo {
         position: absolute;
@@ -62,56 +67,106 @@ nav {
 }
 
 main {
-    height: 90vh;
-    background-color: green;
+
 
     .image-container {
-        margin-top: 50px;
-        margin-bottom:50px;
+        padding: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 625px;
+            margin-top: 17%;
+            margin-right: 0;
+            display: block;
+        }
 
     }
 
+
     .block {
-        background-color: blue;
+        max-width: 625px;
         width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
+        margin: 100px auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: flex-start;
+
         .name {
+            text-align: left;
             text-transform: uppercase;
-            color:  $Grayish-Blue;  
+            color:  $Grayish-Blue;
+            letter-spacing: 3px;
+            font-size: 0.9em;  
            .new {
-               background-color:$Very-Dark-Blue;
-               color: white;
-               border-radius: 18px;
-               padding: 5px;
-               margin: 14px;
-               font-weight: 700;
-               width: 50px;
+                margin-right: 8px;
+                background-color:$Very-Dark-Blue;
+                color: white;
+                background: #242942;
+                padding: 5px 10px;
+                border-radius: 15px;
+                font-weight: bold;
+
            }
+           
+          
         
+      }
+
+      .button-container {
+          display: flex;
+          justify-content: flex-start;
+
+
+        
+          button {
+            background: #ff5c5c;
+            border: none;
+            font-size: 14px;
+            font-family: "Barlow", sans-serif;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            margin: 8px 0;
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            margin-right: 5px;
+          }
+    }
+
+      h1 {
+        text-align: left;
+        font-weight: 700;
+        color: $Very-Dark-Blue;
+        text-transform: uppercase;
+      }
+      
+      p {
+        text-align: left;
+        color:   $Grayish-Blue; 
       }
 }
 
+.block > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
 }
-h1 {
-    margin: 30px;
-    font-weight: 700;
-    color: $Dark-Grayish-Blue;
-    text-transform: uppercase;
-  }
-  
-  p {
-    color:  $Grayish-Blue; 
-    margin: 30px;
-  }
+
+}
+
 
 footer {
-    background-color: yellow;
-    height: 40px;
+    display: block;
+    font-size: 0.8rem;
+    text-justify: auto;
+    text-align: center;
 }
 
 @media screen and (min-width: 426px) {
@@ -137,7 +192,27 @@ footer {
     }
 
     main {
-        background-color: purple;
+    
+
+        .block {
+            max-width: 400px;
+
+            * {
+                margin: 20px auto;
+            }
+
+            .name {
+                font-size: 0.7em;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                padding-right: 25%;
+            }
+        }
     }
 
 }
@@ -150,7 +225,7 @@ footer {
         }
         .nav-links-desktop {
             margin-top: 20px;
-            background-color: aliceblue;
+
             width: 50%;
             float: right;
             display: flex;
@@ -165,7 +240,6 @@ footer {
     }
 
     main {
-        background-color: white;
         display: flex;
         flex-direction: row-reverse;
     }
