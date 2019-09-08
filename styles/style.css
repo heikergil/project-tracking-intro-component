@@ -48,6 +48,16 @@ body {
   min-width: 375px;
 }
 
+.links {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.links:hover {
+  text-decoration: underline;
+}
+
 .hidden {
   display: none;
 }
@@ -78,20 +88,20 @@ nav .hamburguer {
 nav .line {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: black;
   margin: 5px;
 }
 nav .nav-links {
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: fixed;
   top: 30%;
   right: 50%;
   transform: translate(50%, -30%);
   width: 250px;
   height: 200px;
-  background-color: azure;
+  background-color: white;
 }
 nav .nav-links-desktop {
   display: none;
@@ -99,17 +109,23 @@ nav .nav-links-desktop {
 
 main .image-container {
   padding: 0;
+  background-color: #a0a1ac;
+  width: 45%;
+  height: 350px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
 }
 main .image-container img {
+  position: relative;
   width: 100%;
-  height: auto;
-  max-width: 625px;
-  margin-top: 17%;
-  margin-right: 0;
-  display: block;
+  height: 110%;
+  right: 0;
+  top: 100px;
 }
 main .block {
-  max-width: 625px;
+  max-width: 675px;
   width: 90%;
   margin: 100px auto;
   display: flex;
@@ -147,6 +163,7 @@ main .block .button-container button {
   border-radius: 5px;
   text-transform: uppercase;
   margin: 8px 0;
+  cursor: pointer;
 }
 main .block .button-container span {
   display: flex;
@@ -165,8 +182,8 @@ main .block p {
   color: #a0a1ac;
 }
 main .block > * {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   width: 100%;
 }
 
@@ -183,7 +200,6 @@ footer {
   }
   nav .nav-links-desktop {
     margin-top: 20px;
-    background-color: aliceblue;
     width: 50%;
     float: right;
     display: flex;
@@ -191,11 +207,17 @@ footer {
   nav .nav-links-desktop li {
     display: inline-block;
     margin: 0 auto;
-    text-decoration: none;
+  }
+  nav .nav-links-desktop:last-child {
+    color: #a0a1ac;
+  }
+  nav .links-login {
+    color: #a0a1ac;
   }
 
   main .block {
-    max-width: 400px;
+    margin-left: 20px;
+    max-width: 450px;
   }
   main .block * {
     margin: 20px auto;
@@ -211,6 +233,13 @@ footer {
   }
 }
 @media screen and (min-width: 689px) {
+  nav .logo {
+    position: absolute;
+    cursor: pointer;
+    left: 13%;
+    top: 50%;
+    transform: translate(-15%, -50%);
+  }
   nav .hamburguer {
     display: none;
   }
@@ -222,13 +251,47 @@ footer {
   }
   nav .nav-links-desktop li {
     display: inline-block;
-    margin: 0 auto;
     text-decoration: none;
   }
 
   main {
     display: flex;
     flex-direction: row-reverse;
+    align-content: center;
+  }
+  main .block {
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+  main .block > * {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  main .block {
+    margin-left: 10%;
+    margin-top: 120px;
+    margin-bottom: 0;
+  }
+  main .block > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav .logo {
+    left: 15%;
+  }
+
+  main .block {
+    margin-left: 15%;
+    margin-top: 120px;
+    margin-bottom: 0;
+  }
+  main .block > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
